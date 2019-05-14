@@ -11,7 +11,7 @@ G = []
 bases = ['T', 'C', 'A', 'G']
 
 os.system('cls')
-
+# populates each base list with the number of occurances in the data set
 for letters in bases:
     T.append(int(input('Enter the number of T to {} conversions: '.format(letters))))
 for letters in bases:
@@ -21,7 +21,10 @@ for letters in bases:
 for letters in bases:
     G.append(int(input('Enter the number of G to {} conversions: '.format(letters))))
 
+# forms a sort of matrix using the four base lists
 b = [T, C, A, G]
+
+# function so calculate S
 
 
 def transitions(tbl):
@@ -33,6 +36,8 @@ def transitions(tbl):
     tot = sum(tbl)
     s = trans / tot
     return s
+
+# function to calculate V
 
 
 def transversions(tbl):
@@ -49,12 +54,15 @@ def transversions(tbl):
     v = trans / tot
     return v
 
+# function to calculate the proportion of S to V
+
 
 def K(tbl):
     s = transitions(tbl)
     v = transversions(tbl)
     k = ((2 * log(1 - (2 * s) - v)) / (log(1 - (2 * v))) - 1)
     return k
+# function to calculate distance of the two sequences
 
 
 def D(tbl):

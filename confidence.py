@@ -1,7 +1,5 @@
 import os
-import math
-from numpy import *
-
+import numpy as np
 os.system('cls')
 
 n = int(input('Enter the number of sites in the data set: '))
@@ -15,14 +13,14 @@ def P(diff, num):
 
 def distance(diff, num):
     p = P(diff, num)
-    d = ((-3/4) * log(1 - ((4 / 3) * p)))
+    d = ((-3/4) * np.log(1 - ((4 / 3) * p)))
     return d
 
 
 def sterr(diff, num):
     p = P(diff, num)
     err = (p * (1 - p)) / ((1 - ((4 * p) / 3) ** 2) * num)
-    conf = (1.96 * sqrt(err))
+    conf = (1.96 * np.sqrt(err))
     return conf
 
 

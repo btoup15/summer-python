@@ -1,6 +1,4 @@
-from numpy import *
-import math
-import time
+import numpy as np
 import os
 
 T = []
@@ -33,7 +31,7 @@ def transitions(tbl):
     trans += tbl[1][0]
     trans += tbl[2][3]
     trans += tbl[3][2]
-    tot = sum(tbl)
+    tot = np.sum(tbl)
     s = trans / tot
     return s
 
@@ -50,7 +48,7 @@ def transversions(tbl):
     trans += tbl[2][1]
     trans += tbl[3][0]
     trans += tbl[3][1]
-    tot = sum(tbl)
+    tot = np.sum(tbl)
     v = trans / tot
     return v
 
@@ -60,7 +58,7 @@ def transversions(tbl):
 def K(tbl):
     s = transitions(tbl)
     v = transversions(tbl)
-    k = ((2 * log(1 - (2 * s) - v)) / (log(1 - (2 * v))) - 1)
+    k = ((2 * np.log(1 - (2 * s) - v)) / (np.log(1 - (2 * v))) - 1)
     return k
 # function to calculate distance of the two sequences
 
@@ -68,7 +66,7 @@ def K(tbl):
 def D(tbl):
     s = transitions(tbl)
     v = transversions(tbl)
-    d = ((-.5) * log(1 - (2 * s) - v)) - ((.25) * log(1 - (2 * v)))
+    d = ((-.5) * np.log(1 - (2 * s) - v)) - ((.25) * np.log(1 - (2 * v)))
     return d
 
 

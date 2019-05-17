@@ -7,7 +7,6 @@ X = []  # number of different sites in the data set
 y = []  # set of logarithms for likelihood
 
 
-# calculates the natural logarithm of likelihood since likelihood itself is generally too small to work with
 for s in range(1, 400, 10):
     X.append(s)
 
@@ -20,6 +19,7 @@ def lkl(x, d):
     l = (x * math.log((1 / 16) - ((1 / 16) * (math.exp((-4 * d) / 3))))) + \
         ((n - x) * math.log((1 / 16) + ((3 / 16) * (math.exp((-4 * d) / 3)))))
     return l
+# calculates the natural logarithm of likelihood since likelihood itself is generally too small to work with
 
 
 for i in range(len(X)):

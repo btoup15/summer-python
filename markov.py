@@ -110,7 +110,7 @@ countC = 0
 countA = 0
 countG = 0
 
-for iterations in range(1, its):
+for iterations in range(0, its):
     sequenceComp.append(basePrediction(years))
 
 for sequences in sequenceComp:
@@ -127,7 +127,8 @@ percC = (countC / its) * 100
 percA = (countA / its) * 100
 percG = (countG / its) * 100
 
-print('The probability of starting at base {} and ending at base T is: '.format(startingBase), percT)
-print('The probability of starting at base {} and ending at base C is: '.format(startingBase), percC)
-print('The probability of starting at base {} and ending at base A is: '.format(startingBase), percA)
-print('The probability of starting at base {} and ending at base G is: '.format(startingBase), percG)
+
+print('The probability of starting at base {} and ending at base T is: '.format(startingBase), percT, '%')
+print('The probability of starting at base {} and ending at base C is: '.format(startingBase), percC, '%')
+print('The probability of starting at base {} and ending at base A is: '.format(startingBase), percA, '%')
+print('The probability of starting at base {} and ending at base G is: '.format(startingBase), percG, '%')

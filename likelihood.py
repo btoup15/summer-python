@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 D = []  # distances for each number X in the data set
 n = 948  # total number of sites in the data set
-X = []  # number of different sites in the data set
+X = []  # number of variable sites in the data set
 y = []  # set of logarithms for likelihood
 
 

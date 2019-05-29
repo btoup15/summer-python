@@ -112,6 +112,8 @@ countG = 0
 
 for iterations in range(0, its):
     sequenceComp.append(basePrediction(years))
+    print('Iteration number #{} finished'.format(iterations+1))
+
 
 for sequences in sequenceComp:
     if sequences[-1] == 'T':
@@ -127,6 +129,7 @@ percC = (countC / its) * 100
 percA = (countA / its) * 100
 percG = (countG / its) * 100
 
+os.system('cls')
 
 print('The probability of starting at base {} and ending at base T is: '.format(startingBase), percT, '%')
 print('The probability of starting at base {} and ending at base C is: '.format(startingBase), percC, '%')

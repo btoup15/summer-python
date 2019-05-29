@@ -110,7 +110,7 @@ countT = 0
 countC = 0
 countA = 0
 countG = 0
-
+print('Working...')
 for iterations in pbar(range(0, its)):
     sequenceComp.append(basePrediction(years))
 
@@ -129,7 +129,6 @@ percC = (countC / its) * 100
 percA = (countA / its) * 100
 percG = (countG / its) * 100
 
-os.system('cls')
 
 print('The probability of starting at base {} and ending at base T is: '.format(startingBase), percT, '%')
 print('The probability of starting at base {} and ending at base C is: '.format(startingBase), percC, '%')

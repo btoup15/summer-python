@@ -1,7 +1,8 @@
 import numpy as np
 import random as rm
 import os
-
+from progressbar import ProgressBar
+pbar = ProgressBar()
 os.system('cls')
 states = ['T', 'C', 'A', 'G']
 transitionName = [['TT', 'TC', 'TA', 'TG'], ['CT', 'CC', 'CA', 'CG'],
@@ -110,9 +111,8 @@ countC = 0
 countA = 0
 countG = 0
 
-for iterations in range(0, its):
+for iterations in pbar(range(0, its)):
     sequenceComp.append(basePrediction(years))
-    print('Iteration number #{} finished'.format(iterations+1))
 
 
 for sequences in sequenceComp:

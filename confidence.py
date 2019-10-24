@@ -28,3 +28,4 @@ os.system('cls')
 print('The distance of the two sequences is {} +/- {}'.format(round(distance(x, n), 4), round(sterr(x, n), 4)))
 print('The 95% confidence interval is ({}, {})'.format(
     (round((distance(x, n) - sterr(x, n)), 4)), (round((distance(x, n) + sterr(x, n)), 4))))
+##test
